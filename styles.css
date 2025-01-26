@@ -1,0 +1,180 @@
+/* Ensure html/body take full browser height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* We disable body-level scrolling so that #chat-window does the scrolling. */
+    overflow: hidden; /* optional but often desired */
+    font-family: "Roboto", sans-serif;
+    background: #fafafa;
+    color: #333;
+  }
+  
+  /* Use a column flex layout for the body */
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* A top header that doesn't scroll */
+  header {
+    background: #0d1117;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    flex: 0 0 auto; /* does not grow/shrink */
+  }
+  
+  /* The main chat container, below the header. 
+     We give it flex: 1 so it expands to fill leftover vertical space. 
+     We set min-height: 0 so child can actually scroll. */
+  #chat-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0; /* critical to allow child scroll */
+    max-width: 900px; /* optional max width for the content */
+    width: 100%;
+    margin: 0 auto; /* center horizontally */
+    padding: 10px;
+  }
+  
+  /* The scrollable chat window itself. 
+     Also set min-height: 0 to allow flex child to shrink. */
+  #chat-window {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  
+  /* The input row at the bottom */
+  #input-container {
+    display: flex;
+    flex: 0 0 auto; /* no growing */
+  }
+  
+  /* Input styling */
+  #user-input {
+    flex: 1 1 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px;
+    margin-right: 10px;
+    outline: none;
+  }
+  
+  #send-btn {
+    background: #2da44e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+  
+  #send-btn:hover {
+    background: #278346;
+  }
+  
+  /* Each message row */
+  .message {
+    width: 100%;
+    display: flex;
+    margin-bottom: 14px;
+  }
+  
+  /* Right side for user messages (only if no image) */
+  .user-msg {
+    justify-content: flex-end;
+  }
+  
+  /* Left side for assistant or user with image (tool output) */
+  .assistant-msg {
+    justify-content: flex-start;
+  }
+  
+  /* The bubble for user messages */
+  .user-bubble {
+    background-color: #0d99ff;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    max-width: 70%;
+    border-top-right-radius: 0;
+    line-height: 1.4;
+  }
+  
+  /* The bounding for assistant or tool text/images */
+  .assistant-content {
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    padding: 10px 14px;
+    max-width: 70%;
+    border-top-left-radius: 0;
+    line-height: 1.5;
+  }
+  
+  /* Markdown styling */
+  .assistant-content h1,
+  .assistant-content h2,
+  .assistant-content h3 {
+    margin: 0.75rem 0 0.5rem;
+  }
+  
+  .assistant-content p {
+    margin: 0.5rem 0;
+  }
+  
+  .assistant-content ul {
+    margin: 0.5rem 0 0.5rem 1.5rem;
+  }
+  
+  .assistant-content li {
+    margin: 0.3rem 0;
+  }
+  
+  .assistant-content strong {
+    font-weight: bold;
+  }
+  
+  .assistant-content code {
+    background: #eaeaea;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  
+  /* Images in assistant content */
+  .assistant-content img {
+    max-width: 100%;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  /* Typing indicator style */
+  .typing-indicator {
+    font-style: italic;
+    color: #777;
+  }
+  
+  @media (max-width: 700px) {
+    #chat-container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .user-bubble,
+    .assistant-content {
+      max-width: 85%;
+    }
+  }
+  
+  
+  
