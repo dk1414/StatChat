@@ -12,7 +12,7 @@ Here are some examples of what you might ask me:
 - "Show me a trend line of Aaron Judge's home runs from 2015 to 2023."
 - "What teams had the highest slugging percentage in 2021?"
 
-If you're interested in specific stats from the Statcast era (2015-2024), feel free to ask! I'm here to help you explore the numbers and gain a deeper understanding of the game of baseball. Let me know what you'd like to know!
+If you're interested in specific stats from the Statcast era (2015-mid 2024), feel free to ask! I'm here to help you explore the numbers and gain a deeper understanding of the game of baseball. Let me know what you'd like to know!
 
 `;
 
