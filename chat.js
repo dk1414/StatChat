@@ -13,7 +13,7 @@ Here are some examples of what you might ask me:
 - "What teams had the highest slugging percentage in 2021?"
 
 If you're interested in specific stats from the Statcast era (2015-mid 2024), feel free to ask! I'm here to help you explore the numbers and gain a deeper understanding of the game of baseball. Let me know what you'd like to know!
-
+(Note): Certain stats like WAR and stolen bases are very difficult to compute from pitch-level statcast data, so queries on these kinds of metrics may not be reliable.
 `;
 
 let threadId = null;
