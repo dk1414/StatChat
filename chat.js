@@ -1,6 +1,8 @@
 const API_BASE_URL = "https://statcast-analytics-695594480233.us-central1.run.app"; 
 const intro_message = `
 
+UPDATE: I have shut down the model for now to save on database expenses. Please reach out if you are interested in demo'ing. Thanks!
+
 Hello! I'm an MLB baseball analyst bot here to help you explore and understand baseball data. Whether you're curious about player performances, statistics, or want visual insights through charts and visualizations, I've got you covered.
 
 Here are some examples of what you might ask me:
